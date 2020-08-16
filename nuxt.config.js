@@ -57,8 +57,22 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    'nuxt-ssr-cache'
   ],
+  /*
+   ** nuxt-ssr-cache module config
+   */
+  cache: {
+    pages: [
+      '/',
+    ],
+    store: {
+      type: 'memory',
+      max: 100,
+      ttl: 10 * 60
+    }
+  },
   /*
    ** styles-resource module configuration
    ** https://github.com/nuxt-community/style-resources
