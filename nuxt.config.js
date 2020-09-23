@@ -52,13 +52,18 @@ export default {
    */
   buildModules: [
     '@nuxtjs/vuetify',
+    '@nuxtjs/google-analytics'
   ],
+  googleAnalytics: {
+    id: 'UA-173503277-2'
+  },
   /*
    ** Nuxt.js modules
    */
   modules: [
     '@nuxtjs/style-resources',
-    'nuxt-ssr-cache'
+    'nuxt-ssr-cache',
+    '@nuxt/content'
   ],
   /*
    ** nuxt-ssr-cache module config
