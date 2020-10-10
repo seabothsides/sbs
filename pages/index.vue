@@ -17,17 +17,17 @@ export default {
 <template lang="pug">
 v-container(fluid)
   v-row.text-center.justify-center
-    v-col(cols='6')
+    v-col(cols=12, md=6)
       h2 A salt lake so big that merchants could spend their whole lives and still not get all the salt
   v-row.justify-center
     v-col(cols=6)
       v-row.justify-center
-        v-btn.col-5.mb-7(x-large, to='blog', rounded) Blog
+        v-btn.col-md-5.mb-7.font-weight-black(x-large, to='blog', rounded) Blog
       v-row.justify-center
-        v-btn.col-5.mb-7(:href='YTurl', target='_blank', x-large, rounded)
+        v-btn.col-md-5.mb-7(:href='YTurl', target='_blank', x-large, rounded)
           v-icon.red--text(x-large) mdi-youtube
       v-row.justify-center
-        v-btn.col-5.mb-7(:href='Iurl', target='_blank', x-large, rounded)
+        v-btn.col-md-5.mb-7(:href='Iurl', target='_blank', x-large, rounded)
           v-icon.purple--text(x-large) mdi-instagram
 </template>
 
