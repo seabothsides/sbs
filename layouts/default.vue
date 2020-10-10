@@ -1,8 +1,8 @@
 <template lang="pug">
-  v-app
-    my-header /
-    v-main 
-      nuxt
+v-app
+  my-header(app) /
+  v-main 
+    nuxt
 </template>
 
 <script>

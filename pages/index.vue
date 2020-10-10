@@ -15,17 +15,20 @@ export default {
 </script>
 
 <template lang="pug">
-v-container( fluid )
-  v-row.text-center
-    v-col( cols='12')
-      h1 Help a Brother Out
-    v-col 
-      p by visiting my #[a(:href="YTurl" target="_blank") youtube] #[v-icon.red--text( large ) mdi-youtube]
-      p or check out my #[a(:href='Iurl' target="_blank") instagram] #[v-icon.purple--text( large ) mdi-instagram]
-      ul( v-for="articles in articles")
-        li  
-          nuxt-link( :to="{ name: 'blog-slug', params: { slug: articles.slug } }" ) {{ articles.title }}
-
+v-container(fluid)
+  v-row.text-center.justify-center
+    v-col(cols='6')
+      h2 A salt lake so big that merchants could spend their whole lives and still not get all the salt
+  v-row.justify-center
+    v-col(cols=6)
+      v-row.justify-center
+        v-btn.col-5.mb-7(x-large, to='blog', rounded) Blog
+      v-row.justify-center
+        v-btn.col-5.mb-7(:href='YTurl', target='_blank', x-large, rounded)
+          v-icon.red--text(x-large) mdi-youtube
+      v-row.justify-center
+        v-btn.col-5.mb-7(:href='Iurl', target='_blank', x-large, rounded)
+          v-icon.purple--text(x-large) mdi-instagram
 </template>
 
 

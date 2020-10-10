@@ -1,12 +1,17 @@
-<template>
-  <div class="article component">
-    <img :src="author.img" />
-    <div>
-      <h4>Author</h4>
-      <p>{{ author.name }}</p>
-      <p>{{ author.bio }}</p>
-    </div>
-  </div>
+<template lang="pug">
+v-row.text-center.justify-center
+  v-col(cols=12, sm=7)
+    v-card.mx-auto.d-md-flex.pb-md-3
+      .justify-center.justify-sm-start
+        v-img.pt-5.mt-md-3.mx-auto.ml-md-4(
+          :src='author.img',
+          contain,
+          max-width='125'
+        )
+      div
+        v-card-title.justify-center {{ author.name }}
+        v-card-subtitle Author
+        v-card-text {{ author.bio }}
 </template>
 
 <script>
