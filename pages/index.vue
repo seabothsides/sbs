@@ -1,10 +1,5 @@
 <script>
 export default {
-  async asyncData({ $content }) {
-    const articles = await $content('articles').fetch()
-
-    return { articles }
-  },
   data() {
     return {
       YTurl: 'https://www.youtube.com/channel/UCL-p8Y35mf3vxhc625Ca2PQ',

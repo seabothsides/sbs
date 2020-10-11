@@ -1,15 +1,16 @@
 <template lang="pug">
-v-sheet
-  v-card.my-3(v-for='(articles, index) in articles', :key='index')
-    v-card-title 
-      nuxt-link(:to='{ name: "blog-slug", params: { slug: articles.slug } }') {{ articles.title }}
-    v-card-text {{ articles.description }}
+v-row.justify-center
+  v-col(cols=12, md=8)
+    v-card.mb-4(v-for='(articles, index) in articles', :key='index')
+      v-card-title 
+        nuxt-link(:to='{ name: "blog-slug", params: { slug: articles.slug } }') {{ articles.title }}
+      v-card-text {{ articles.description }}
 </template>
 
 <script>
 export default {
   async asyncData({ $content }) {
-    const articles = await $content('articles').fetch()
+    const articles = await $content('articles').sortBy('date', 'desc').fetch()
 
     return { articles }
   },
