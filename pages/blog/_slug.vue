@@ -39,9 +39,9 @@ export default {
 v-container
   author(:author="article.author")
   v-navigation-drawer(right, clipped, app)
-    v-list
-      p.text-center.strong Table Of Contents
-      v-list-item(v-for="link of article.toc" :key="link.id" :class="{ 'text-wrap v-list-item__title': link.depth === 2, 'pl-10 v-list-item__subtitle': link.depth === 3 }")
+    ul
+      p.text-center.overline.mb-n1 Table Of Contents
+      li(v-for="link of article.toc" :key="link.id" :class="{ 'text-wrap pb-1 v-list-item__title': link.depth === 2, 'pl-10 pb-1 v-list-item__subtitle': link.depth === 3 }")
         NuxtLink(:to="`#${link.id}`") {{ link.text }}
   v-divider
   article.pa-md-5
@@ -50,7 +50,7 @@ v-container
     p.text-subtitle-1.text--secondary {{ article.description }}
     v-divider
     ul.hidden-md-and-up.mb-2.pl-2
-      p.text--secondary Table Of Contents
+      p.text--secondary.mb-n1.overline Table Of Contents
       li.mb-1(v-for="link of article.toc" :key="link.id" :class="{ 'text-wrap v-list-item__title': link.depth === 2, 'pl-10 v-list-item__subtitle': link.depth === 3 }")
         NuxtLink(:to="`#${link.id}`") {{ link.text }}
     v-divider.mb-2
@@ -62,6 +62,7 @@ v-container
   margin-bottom: 0.25em;
   margin-top: 1.75em;
 }
+
 .nuxt-content strong {
   color: purple;
 }
@@ -69,9 +70,11 @@ v-container
 .nuxt-content a {
   text-decoration: none;
 }
+
 .nuxt-content li {
-  margin-bottom: 1em;
+  margin-bottom: 0.75em;
 }
+
 .v-application code {
   background-color: #e3edf2;
   color: #1460b6;

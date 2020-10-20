@@ -1,6 +1,6 @@
 ---
 title: Top 6 UI Frameworks
-Description: The best UI Frameworks to make front end development a lot more streamlined and resilient working with NuxtJS
+description: The best UI Frameworks to make front end development a lot more streamlined and resilient working with NuxtJS
 author:
   name: Ricardo Calcina
   bio: Self taught web developer, primarly using Nuxt for front end work.
@@ -42,7 +42,7 @@ Each one giving you more freedom of development and design. Props can affect how
 
 I highly suggest exploring the [documentation](link to vuetify docs) for a better understanding of Vuetify
 
-### speed of use
+### Speed of use
 
 Now a framework will always speed up work flow eventually, after the initial learning curve.
 
@@ -52,7 +52,7 @@ In fact the reason Vuetify is number one on my list is because it has the most r
 
 Code snippets drastically decrease the learning curve. Because theres less code to remember when you get prompts on screen for being in the right ball park.
 
-Also documentation! It so good to have data-base to search for exactly what you're looking for and how to implement it. Meaning you can learn while you create!
+Also documentation! It's so good to have database to search for exactly what you're looking for and how to implement it. Meaning you can learn while you create!
 
 ### Everything in one
 
@@ -73,9 +73,9 @@ There are so many components and directives and icons available no project is to
 
 Not to mention each component can have extras injected into them via slots. Where you can have a form made of cards with buttons and icons! Neat right.
 
-### considerations
+<h3 class="red--text pb-5"> Considerations </h3>
 
-#### performance
+#### Performance
 
 The size of Vuetify, especially when installed using the create-nuxt-app command, can have an impact on performance.
 
@@ -109,7 +109,7 @@ Tailwind is the only framework in this list that uses the CSS grid system as the
 
 Other framework, of course, have a grid system but built from flex-box. Tailwind has flex-box too, but also the true grid system that uses the fr unit and minmax calculations giving a super fast responsive layout.
 
-### considerations
+<h3 class="red--text pb-5"> Considerations </h3>
 
 #### Components at a cost
 
@@ -117,15 +117,15 @@ This is one of the major changes tailwind has undergone recently, and indeed som
 
 While tailwind provides some free components, they have a one off fee for their complete component library.
 
-However, they have split their UI components from their Marketing components - priced individually at \$149. This is somewhat annoying, every site requires some sort of marketing component as well as UI components.
+However, they have split their UI components from their Marketing components - priced individually at 149USD. This is somewhat annoying, every site requires some sort of marketing component as well as UI components.
 
-To alleviate this tailwind offers a bundle of all their components for \$249.
+To alleviate this tailwind offers a bundle of all their components for 249USD.
 
 While these priced plans are available, they aren't necessary. All the components are made from Tailwinds extensive and well documented CSS utilities.
 
 Indeed, having the components to copy and paste can be time saving. The helper classes are so intuitive you'd find it faster to develop your own components instead of searching for one to tweak for your needs.
 
-#### No ~B~JS
+#### No JS
 
 Tailwind focuses on making CSS utilities that are conducive to concise, consistent and fast development.
 
@@ -161,7 +161,7 @@ Bootstrap uses the very common breakpoint jargon. col-lg-12 for large viewports,
 
 This is common in a lot, if not all frameworks with some variations in the actual implementation. This means learning Bootstrap first can be transferrable to other frameworks. While this is true for other frameworks. Bootstrap is by the far the easiest to start with.
 
-### considerations
+<h3 class="red--text pb-5"> Considerations </h3>
 
 #### JQuery
 
@@ -215,7 +215,7 @@ Vuesax got their bespoke look by being ahead of the curb, or beside it, they use
 
 These icons are clean in design and come as line drawings or solid coloured images. They also have a plethora of logos like Ebay and Vue so you don't have to source some SVG to load from a static file
 
-### considerations
+<h3 class="red--text pb-5"> Considerations </h3>
 
 #### Its still new
 
@@ -265,7 +265,7 @@ This also reduces the crawl time, albeit fractionally, because there are less la
 
 Semantically written HTML also give a better SEO and accessibility functionality.
 
-### considerations
+<h3 class="red--text pb-5"> Considerations </h3>
 
 #### VS code snippets
 
@@ -295,7 +295,7 @@ The components in Buefy uses the same syntax as Bootstrap. So expressions like `
 
 Because Buefy has the same tag style as Bootstrap, you can use the code snippets in .vue file types and code blazing fast.
 
-### considerations
+<h3 class="red--text pb-5"> Considerations </h3>
 
 #### Doc hopping
 
@@ -317,4 +317,4 @@ My top three suggestions from this list are:
 
 - Finally use Bootstrap if you're just starting out, or if you want a fast developing experience that you can completely customise in the future. Learning Bootstrap first means you can pick up other frameworks with ease, and it's by far the quickest to learn. On top of that if you're stuck with anything you'll always find a solution online. But maybe wait for Bootstrap 5 before committing to using Bootstrap in a project you wish scale.
 
-> One worth watching for is Vuesax, I honestly love the look of it and think theres great things to come from the framework.
+_One worth watching for is Vuesax, I honestly love the look of it and think theres great things to come from the framework._
