@@ -19,7 +19,7 @@ Next you're asked to choose your programming language. javascript or typescript.
 
 ## Package manager
 
-You'll then be asked to choose your preferred package manager. Seeing as we use [yarn](link to installing yarn) to start the Nuxt project, let choose that. Also, because cats. Press enter
+You'll then be asked to choose your preferred package manager. Seeing as we use [yarn](/blog/how-to-install-nuxt) to start the Nuxt project, let choose that. Also, because cats. Press enter
 
 ## UI Framework
 
@@ -30,15 +30,15 @@ As of 2020 there are currently 12 UI framework options for Nuxt JS. Of these I h
 - Vuetify JS
 - Tailwind CSS
 - Bootstrap
+- Vuesax
 - Bulma
 - Buefy
-- Vuesax
 
 Now which one you use, you guessed it, depends. It depends on the website design, performance goals, and work integration to name a few
 
 However in the order they are listed any of those 6 would be great.
 
-For a more detailed decision find out which is the [best UI framework]() for you
+For a more detailed decision find out which is the [best UI framework](#) for you
 
 ## Nuxt JS modules
 
