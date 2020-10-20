@@ -40,7 +40,7 @@ The documentation answers everything you'd need to know about using Vuetify. The
 
 Each one giving you more freedom of development and design. Props can affect how a component may look. Slots are used to add extra HTML elements inside of a component, with correct margins and padding. The SASS variables are the class names you can use to alter Vuetify to your needs, or change the default values of components.
 
-I highly suggest exploring the [documentation](link to vuetify docs) for a better understanding of Vuetify
+I highly suggest exploring the [documentation](https://vuetifyjs.com/en/getting-started/installation/) for a better understanding of Vuetify
 
 ### Speed of use
 
@@ -61,7 +61,7 @@ Vuetify comes with material design icons enabled by default.
 Adding a different icon library is as easy as installing it and referencing it in you nuxt.config.js file under default assets
 
 Vuetify also comes with material colours built in.
-A list of the colours can be found in their [documentation](link to colors).
+A list of the colours can be found in their [documentation](https://vuetifyjs.com/en/styles/colors/#classes).
 
 This lets you easily style a project uniformly and efficiently. While having the colours accessible by class names.
 
@@ -81,7 +81,7 @@ The size of Vuetify, especially when installed using the create-nuxt-app command
 
 Although the Nuxt module tries to best optimise Vuetify we can do better manually.
 
-By installing Vuetify after creating a nuxt app we can use [A-La-Carte](link to setting up a-la-carte blog) to only import the components we use from Vuetify.
+By installing Vuetify after creating a nuxt app we can use [A-La-Carte](Link coming soon) to only import the components we use from Vuetify.
 
 This drastically improves performance but adds some extra steps to using Vuetify out of the box.
 
@@ -193,7 +193,7 @@ Vuesax was designed from the ground up, in a modern era and it really showcases 
 
 Vuesax specialises in components that are comprehensive, and reusable, that can be copied straight from the documentation. Implementing the component is as easy as changing a few lines of code.
 
-The most impressive component so far is the card. The card comes in five incredible and modern styles.
+The most impressive component so far is the [card](https://vuesax.com/docs/components/Card.html#default). The card comes in five incredible and modern styles.
 
 Otherwise the Templates can be used the slots to place content in the cards correctly spaced, then style away!
 
@@ -253,7 +253,7 @@ They also have a form section, which isn't common in some of the smaller framewo
 
 It's all covered in the documentation. They offer tried and tested components and layouts that will stick around.
 
-One of the impressive layout categories are [tiles]. This offers a windows like layout perfect for displaying a lot of content in a more artsy style.
+One of the impressive layout categories are [tiles](https://bulma.io/documentation/layout/tiles/). This offers a windows like layout perfect for displaying a lot of content in a more artsy style.
 
 ### Semantic HTML
 

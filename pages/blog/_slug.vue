@@ -41,7 +41,7 @@ v-container
   v-navigation-drawer(right, clipped, app)
     ul
       p.text-center.overline.mb-n1 Table Of Contents
-      li(v-for="link of article.toc" :key="link.id" :class="{ 'text-wrap pb-1 v-list-item__title': link.depth === 2, 'pl-10 pb-1 v-list-item__subtitle': link.depth === 3 }")
+      li(v-for="link of article.toc" :key="link.id" :class="{ 'text-wrap pb-1 v-list-item__title': link.depth === 2, 'pl-5 pb-1 v-list-item__subtitle': link.depth === 3 }")
         NuxtLink(:to="`#${link.id}`") {{ link.text }}
   v-divider
   article.pa-md-5
@@ -51,7 +51,7 @@ v-container
     v-divider
     ul.hidden-md-and-up.mb-2.pl-2
       p.text--secondary.mb-n1.overline Table Of Contents
-      li.mb-1(v-for="link of article.toc" :key="link.id" :class="{ 'text-wrap v-list-item__title': link.depth === 2, 'pl-10 v-list-item__subtitle': link.depth === 3 }")
+      li.mb-1(v-for="link of article.toc" :key="link.id" :class="{ 'text-wrap v-list-item__title': link.depth === 2, 'pl-5 v-list-item__subtitle': link.depth === 3 }")
         NuxtLink(:to="`#${link.id}`") {{ link.text }}
     v-divider.mb-2
     nuxt-content(:document="article") /
