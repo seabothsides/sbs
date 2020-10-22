@@ -1,6 +1,5 @@
 <template lang="pug">
 v-app
-  my-header(app) /
   v-main 
     nuxt
 </template>

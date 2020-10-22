@@ -35,7 +35,10 @@ export default {
       rel: 'icon',
       type: 'image/x-icon',
       href: '/favicon.png'
-    }]
+    }],
+    script: [{
+      src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'
+    }, ],
   },
   /*
    ** Plugins to load before mounting the App

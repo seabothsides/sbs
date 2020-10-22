@@ -157,7 +157,7 @@ Bootstrap has a documentation tailored to Bootstrap-vue which uses the same tags
 
 ### Standardised
 
-Bootstrap uses the very common breakpoint jargon. col-lg-12 for large viewports, col-sm-4 for small ones. You get the gist. The column size, the breakpoint at which it applies, and then the value.
+Bootstrap uses the very common breakpoint jargon. `col-lg-12` for large viewports, `col-sm-4` for small ones. You get the gist. The column size, the breakpoint at which it applies, and then the value.
 
 This is common in a lot, if not all frameworks with some variations in the actual implementation. This means learning Bootstrap first can be transferrable to other frameworks. While this is true for other frameworks. Bootstrap is by the far the easiest to start with.
 
