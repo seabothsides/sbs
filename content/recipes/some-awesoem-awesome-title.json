@@ -1,0 +1,16 @@
+{
+  "date": "2020-10-24T14:59:41.694Z",
+  "categories": [
+    "Eggs",
+    "bacon",
+    ""
+  ],
+  "body": "# some title\n\nmore text, however this will lack syntax correcting\n\nBut:\n- it's still pretty impressive\n- im sure it'll work better now\n- we can only wati to see\n",
+  "description": "Another blog post in testing",
+  "title": "Some awesoem awesome title",
+  "tags": [
+    "well-easy",
+    "top-dollar",
+    ""
+  ]
+}
