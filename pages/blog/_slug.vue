@@ -1,7 +1,7 @@
 <script>
 export default {
   async asyncData({ $content, params }) {
-    const article = await $content('articles', params.slug).fetch()
+    const article = await $content('blog', params.slug).fetch()
 
     return { article }
   },
@@ -11,33 +11,11 @@ export default {
       return new Date(date).toLocaleDateString('en', options)
     },
   },
-  data() {
-    return {
-      query: '',
-      articles: [],
-    }
-  },
-  watch: {
-    async query(query) {
-      if (!query) {
-        this.articles = []
-        return
-      }
-
-      this.articles = await this.$content('articles')
-        .only(['title', 'slug'])
-        .sortBy('createdAt', 'asc')
-        .limit(12)
-        .search(query)
-        .fetch()
-    },
-  },
 }
 </script>
 
 <template lang="pug">
 v-container
-  author(:author="article.author")
   v-navigation-drawer(right, clipped, app)
     ul
       p.text-center.overline.mb-n1 Table Of Contents

@@ -1,6 +1,7 @@
 <template lang="pug">
-v-container
-  nuxt-child
+v-sheet.overflow-y-auto(max-height='90vh')
+  v-container
+    nuxt-child
 </template>
 
 <script>

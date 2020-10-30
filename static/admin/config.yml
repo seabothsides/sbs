@@ -2,20 +2,89 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: static/img
-public_folder: /img
+publish_mode: editorial_workflow
+media_folder: static/uploads
+public_folder: /uploads
+site_url: https://www.seabothsides.com
 
 collections:
-  - name: 'articles'
-    label: 'Articles'
-    format: 'json'
-    folder: 'content/articles'
+  - name: 'options'
+    label: 'Options'
+    format: 'frontmatter'
+    editor:
+      preview: false
+    files:
+      - label: 'Options list'
+        name: 'options'
+        file: 'content/options.md'
+        fields:
+          - label: Categories
+            name: categories
+            widget: object
+            fields:
+              - { label: 'Blog category', name: 'blog', widget: 'list' }
+          - label: Tags
+            name: tags
+            widget: object
+            fields:
+              - { label: 'Blog tags', name: 'blog', widget: 'list' }
+
+  - name: 'authors'
+    label: 'Authors'
+    format: 'frontmatter'
+    editor:
+      preview: false
+    files:
+      - label: 'Authors list'
+        name: 'authors'
+        file: 'content/authors.md'
+        fields:
+          - label: Authors
+            name: author
+            widget: object
+            fields:
+              - { label: 'Author name', name: 'name', widget: 'string' }
+              - { label: Author bio, name: bio, widget: string }
+              - { label: Author img, name: img, widget: image }
+
+  - name: 'blog'
+    label: 'Blog post'
+    format: 'frontmatter'
+    folder: 'content/blog'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{slug}}'
     editor:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - label: 'Authors'
+        name: 'authors'
+        widget: 'relation'
+        collection: 'authors'
+        file: 'authors'
+        required: false
+        value_field: 'author'
+        search_fields: ['author.name']
+        display_field: ['author.name']
+        multiple: true
+      - label: 'Categories'
+        name: 'categories'
+        widget: 'relation'
+        collection: 'options'
+        file: 'options'
+        required: false
+        value_field: 'categories.blog.*'
+        search_fields: ['categories.blog.*']
+        multiple: true
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'relation'
+        collection: 'options'
+        file: 'options'
+        required: false
+        value_field: 'tags.blog.*'
+        search_fields: ['tags.blog.*']
+        multiple: true
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }

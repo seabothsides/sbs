@@ -1,0 +1,7 @@
+---
+categories:
+  blog:
+
+tags:
+  blog:
+---

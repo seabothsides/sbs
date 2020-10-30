@@ -10,7 +10,7 @@ v-row.justify-center
 <script>
 export default {
   async asyncData({ $content }) {
-    const articles = await $content('articles').sortBy('date', 'desc').fetch()
+    const articles = await $content('blog').sortBy('date', 'desc').fetch()
 
     return { articles }
   },
