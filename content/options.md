@@ -4,4 +4,7 @@ categories:
 
 tags:
   blog:
+
+series:
+  blog:
 ---

@@ -28,6 +28,11 @@ collections:
             widget: object
             fields:
               - { label: 'Blog tags', name: 'blog', widget: 'list' }
+          - label: Series
+            name: series
+            widget: object
+            fields:
+              - { label: 'Blog series', name: 'blog', widget: 'list' }
 
   - name: 'authors'
     label: 'Authors'
