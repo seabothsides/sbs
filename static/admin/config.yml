@@ -55,6 +55,8 @@ collections:
   - name: pages
     label: Pages
     format: frontmatter
+    editor:
+      preview: false
     files:
       - label: Landing
         name: landing
@@ -108,7 +110,7 @@ collections:
         collection: 'authors'
         file: 'authors'
         required: false
-        value_field: 'author'
+        value_field: 'author.name'
         search_fields: ['author.name']
         display_field: ['author.name']
         multiple: true
