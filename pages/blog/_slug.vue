@@ -21,11 +21,14 @@ v-container
       p.text-center.overline.mb-n1 Table Of Contents
       li(v-for="link of article.toc" :key="link.id" :class="{ 'text-wrap pb-1 v-list-item__title': link.depth === 2, 'pl-5 pb-1 v-list-item__subtitle': link.depth === 3 }")
         NuxtLink(:to="`#${link.id}`") {{ link.text }}
-  v-divider
-  article.pa-md-5
-    p.overline Article last updated: {{ formatDate(article.updatedAt) }}
-    h1.text-h3 {{ article.title }}
-    p.text-subtitle-1.text--secondary {{ article.description }}
+  v-container
+    h1.text-h4 {{ article.title }}
+    div.text-overline.ml-1.text--secondary Article last updated: {{ formatDate(article.updatedAt) }}
+    div.text-subtitle-1 {{ article.description }}
+    v-card.pa-1.align-center.mb-1(flat)
+      v-avatar.mr-2 
+        img( :src="article.author.img" )
+      p.d-inline.subtitle-2.text--secondary Author: {{ article.author.name }}
     v-divider
     ul.hidden-md-and-up.mb-2.pl-2
       p.text--secondary.mb-n1.overline Table Of Contents

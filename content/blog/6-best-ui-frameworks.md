@@ -4,7 +4,7 @@ description: The best UI Frameworks to make front end development a lot more str
 author:
   name: Ricardo Calcina
   bio: Self taught web developer, primarly using Nuxt for front end work.
-  img: /author-img-ric.png
+  img: /uploads/author-img-ric.png
 ---
 
 Choosing a UI Framework, very much like choosing a frontend framework, can be daunting at first.

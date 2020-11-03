@@ -4,7 +4,7 @@ description: How to install Nuxt JS to make a website, for free
 author:
   name: Ricardo Calcina
   bio: Self taught web developer, primarly using Nuxt for front end work.
-  img: /author-img-ric.png
+  img: /uploads/author-img-ric.png
 ---
 
 Nuxt JS is a framework built on Vue JS, this is one of the easiest frameworks to use in 2020 to make websites from scratch and to have complete control over style and functions. All for free, for the most part.
