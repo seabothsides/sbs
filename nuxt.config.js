@@ -16,8 +16,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    title: 'Sea Both Sides',
     meta: [{
         charset: 'utf-8'
       },
@@ -28,7 +27,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: 'Learn how to design, develop and deploy a website using Nuxt JS as the frontend framework. Nuxt is a powerful, modular based framework with extensive full static capabilities.'
       }
     ],
     link: [{

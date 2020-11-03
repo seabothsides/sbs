@@ -11,6 +11,36 @@ export default {
       return new Date(date).toLocaleDateString('en', options)
     },
   },
+  head() {
+    return {
+      title: this.article.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.article.description,
+        },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: this.article.title },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.article.description,
+        },
+        // Twitter Card
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.article.title,
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.article.description,
+        },
+      ],
+    }
+  },
 }
 </script>
 
@@ -45,11 +75,12 @@ v-container
 }
 
 .nuxt-content strong {
-  color: purple;
+  color: #e040fb;
 }
 
 .nuxt-content a {
   text-decoration: none;
+  color: #3d5afe;
 }
 
 .nuxt-content li {

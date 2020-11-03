@@ -106,4 +106,4 @@ Use jsconfig.json, this is best for VS code which you should already be using to
 
 That's it. You can now setup a Nuxt JS app tailored to your needs. Of course all these options are based on individual needs. There is no right or wrong way, so try out different options and configurations to see what tickles your pickle.
 
-But some of the most important options are rendering mode and deployment target. which i recommend SPA and Static (jamstack) respectively
+But some of the most important options are rendering mode and deployment target. Which i recommend SPA and Static (jamstack) respectively

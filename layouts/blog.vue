@@ -16,7 +16,7 @@ v-app
         v-list-item-content
           v-list-item-title.pl-3 Blog Nav
           v-divider
-          v-btn(text, to='/blog', exact) Articles
+          v-btn(text, :to='{ name: "blog" }', exact) Articles
   v-main.overflow-hidden 
     nuxt
 </template>
