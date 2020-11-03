@@ -1,10 +1,13 @@
 <template lang="pug">
-v-row.justify-center
-  v-col(cols=12, md=8)
-    v-card.mb-4(v-for='(articles, index) in articles', :key='index')
-      v-card-title 
-        nuxt-link(:to='{ name: "blog-slug", params: { slug: articles.slug } }') {{ articles.title }}
-      v-card-text {{ articles.description }}
+v-container
+  v-row.justify-center
+    v-col(cols=12, md=8)
+      v-card.mb-4(v-for='(articles, index) in articles', :key='index')
+        v-card-title 
+          nuxt-link(
+            :to='{ name: "blog-slug", params: { slug: articles.slug } }'
+          ) {{ articles.title }}
+        v-card-text {{ articles.description }}
 </template>
 
 <script>
