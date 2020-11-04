@@ -8,8 +8,8 @@ public_folder: /uploads
 site_url: https://www.seabothsides.com
 
 collections:
-  - name: 'options'
-    label: 'Options'
+  - label: 'Options'
+    name: 'options'
     format: 'frontmatter'
     editor:
       preview: false
@@ -34,8 +34,8 @@ collections:
             fields:
               - { label: 'Blog series', name: 'blog', widget: 'list' }
 
-  - name: pages
-    label: Pages
+  - label: Pages
+    name: pages
     format: frontmatter
     editor:
       preview: false
@@ -96,8 +96,8 @@ collections:
                       required: false,
                     }
 
-  - name: 'blog'
-    label: 'Blog post'
+  - label: 'Blog post'
+    name: 'blog'
     format: 'frontmatter'
     folder: 'content/blog'
     create: true
@@ -107,6 +107,7 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: Thumbnail, name: thumbnail, widget: image, required: false }
       - label: Author
         name: author
         widget: object
