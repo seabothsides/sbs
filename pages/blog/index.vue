@@ -13,7 +13,7 @@ v-container
 <script>
 export default {
   async asyncData({ $content }) {
-    const articles = await $content('blog').sortBy('date', 'desc').fetch()
+    const articles = await $content('blog').sortBy('createdAt', 'desc').fetch()
 
     return { articles }
   },

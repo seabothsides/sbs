@@ -87,9 +87,18 @@ v-container
   margin-bottom: 0.75em;
 }
 
+.nuxt-content blockquote {
+  background: #f6fbfb;
+  border-left: 10px solid #1460b6;
+  color: #1460b6;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+
 .v-application code {
   background-color: #e3edf2;
   color: #1460b6;
+  font-size: 1em;
 }
 
 pre[class*='language-'] {

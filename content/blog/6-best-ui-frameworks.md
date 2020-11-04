@@ -317,4 +317,4 @@ My top three suggestions from this list are:
 
 - Finally use Bootstrap if you're just starting out, or if you want a fast developing experience that you can completely customise in the future. Learning Bootstrap first means you can pick up other frameworks with ease, and it's by far the quickest to learn. On top of that if you're stuck with anything you'll always find a solution online. But maybe wait for Bootstrap 5 before committing to using Bootstrap in a project you wish scale.
 
-_One worth watching for is Vuesax, I honestly love the look of it and think theres great things to come from the framework._
+> One worth watching for is Vuesax, I honestly love the look of it and think theres great things to come from the framework.
