@@ -53,8 +53,14 @@ collections:
                 widget: object
                 fields:
                   - { label: 'Author name', name: 'name', widget: 'string' }
-                  - { label: Author bio, name: bio, widget: string }
                   - { label: Author img, name: img, widget: image }
+                  - { label: Author bio, name: bio, widget: string }
+                  - {
+                      label: Author about,
+                      name: about,
+                      widget: markdown,
+                      required: false,
+                    }
 
   - name: pages
     label: Pages
