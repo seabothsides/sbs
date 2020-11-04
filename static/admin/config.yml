@@ -34,41 +34,13 @@ collections:
             fields:
               - { label: 'Blog series', name: 'blog', widget: 'list' }
 
-  - name: 'authors'
-    label: 'Authors'
-    format: 'frontmatter'
-    editor:
-      preview: false
-    files:
-      - label: 'Authors list'
-        name: 'authors'
-        file: 'content/authors.md'
-        fields:
-          - label: Authors
-            name: authors
-            widget: list
-            fields:
-              - label: Author
-                name: author
-                widget: object
-                fields:
-                  - { label: 'Author name', name: 'name', widget: 'string' }
-                  - { label: Author img, name: img, widget: image }
-                  - { label: Author bio, name: bio, widget: string }
-                  - {
-                      label: Author about,
-                      name: about,
-                      widget: markdown,
-                      required: false,
-                    }
-
   - name: pages
     label: Pages
     format: frontmatter
     editor:
       preview: false
     files:
-      - label: Landing
+      - label: Landing page
         name: landing
         file: content/pages/landing.md
         fields:
@@ -102,6 +74,27 @@ collections:
                           widget: string,
                           required: false,
                         }
+      - label: 'Authors list'
+        name: 'authors'
+        file: 'content/pages/authors.md'
+        fields:
+          - label: Authors
+            name: authors
+            widget: list
+            fields:
+              - label: Author
+                name: author
+                widget: object
+                fields:
+                  - { label: 'Author name', name: 'name', widget: 'string' }
+                  - { label: Author img, name: img, widget: image }
+                  - { label: Author bio, name: bio, widget: string }
+                  - {
+                      label: Author about,
+                      name: about,
+                      widget: markdown,
+                      required: false,
+                    }
 
   - name: 'blog'
     label: 'Blog post'
