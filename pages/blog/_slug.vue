@@ -52,7 +52,7 @@ v-container
       li(v-for="link of article.toc" :key="link.id" :class="{ 'text-wrap pb-1 v-list-item__title': link.depth === 2, 'pl-5 pb-1 v-list-item__subtitle': link.depth === 3 }")
         NuxtLink(:to="`#${link.id}`") {{ link.text }}
   v-container
-    h1.text-h4 {{ article.title }}
+    h1.text-h4.text-capitalize {{ article.title }}
     div.text-overline.ml-1.text--secondary Article last updated: {{ formatDate(article.updatedAt) }}
     div.text-subtitle-1 {{ article.description }}
     v-card.pa-1.align-center.mb-1(flat)

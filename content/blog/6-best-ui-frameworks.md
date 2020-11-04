@@ -1,5 +1,5 @@
 ---
-title: Top 6 UI Frameworks
+title: Top 6 UI frameworks
 description: The best UI Frameworks to make front end development a lot more streamlined and resilient working with NuxtJS
 author:
   name: Ricardo Calcina
