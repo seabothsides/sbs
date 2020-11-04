@@ -11,7 +11,7 @@ export default {
 <template lang="pug">
 v-container(fluid)
   v-row
-    v-img(src='/header.svg', cover)
+    v-img(src='/uploads/header.webp', cover, max-height='400')
   v-row.text-center.justify-center
     v-col(cols=12, md=6)
       h2 A salt lake so big that merchants could spend their whole lives and still not get all the salt
