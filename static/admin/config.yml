@@ -45,12 +45,16 @@ collections:
         file: 'content/authors.md'
         fields:
           - label: Authors
-            name: author
-            widget: object
+            name: authors
+            widget: list
             fields:
-              - { label: 'Author name', name: 'name', widget: 'string' }
-              - { label: Author bio, name: bio, widget: string }
-              - { label: Author img, name: img, widget: image }
+              - label: Author
+                name: author
+                widget: object
+                fields:
+                  - { label: 'Author name', name: 'name', widget: 'string' }
+                  - { label: Author bio, name: bio, widget: string }
+                  - { label: Author img, name: img, widget: image }
 
   - name: pages
     label: Pages
@@ -104,16 +108,22 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - label: 'Authors'
-        name: 'authors'
-        widget: 'relation'
-        collection: 'authors'
-        file: 'authors'
-        required: false
-        value_field: 'author.name'
-        search_fields: ['author.name']
-        display_field: ['author.name']
-        multiple: true
+      - label: Author
+        name: author
+        widget: object
+        fields:
+          - {
+              label: Name,
+              name: name,
+              widget: string,
+              default: Ricardo Calcina,
+            }
+          - {
+              label: Image,
+              name: img,
+              widget: image,
+              default: /uploads/author-img-ric.png,
+            }
       - label: 'Categories'
         name: 'categories'
         widget: 'relation'
