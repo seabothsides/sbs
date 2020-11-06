@@ -39,7 +39,7 @@ export default {
       src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'
     }, ],
     __dangerouslyDisableSanitizersByTagID: {
-      description: ['innerHTML']
+      gtmscript2: ['innerHTML']
     },
     script: [{
         hid: 'gtm-script1',
@@ -47,6 +47,7 @@ export default {
         defer: true
       },
       {
+        vmid: 'gtmscript2',
         hid: 'gtm-script2',
         innerHTML: `
           window.dataLayer = window.dataLayer || [];
