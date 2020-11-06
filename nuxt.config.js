@@ -16,7 +16,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: 'Sea Both Sides',
+    title: 'The Nuxt Project',
     meta: [{
         charset: 'utf-8'
       },
@@ -57,7 +57,7 @@ export default {
     '@nuxtjs/google-analytics'
   ],
   googleAnalytics: {
-    id: 'UA-173503277-2'
+    id: 'G-81TYX7X8H0'
   },
   /*
    ** Nuxt.js modules
