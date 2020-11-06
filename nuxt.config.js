@@ -38,25 +38,6 @@ export default {
     script: [{
       src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'
     }, ],
-    __dangerouslyDisableSanitizers: ['script'],
-    script: [{
-        hid: 'gtm-script1',
-        src: 'https://www.googletagmanager.com/gtag/js?id=G-81TYX7X8H0',
-        defer: true
-      },
-      {
-        hid: 'gtm-script2',
-        innerHTML: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-81TYX7X8H0');
-        `,
-        type: 'text/javascript',
-        charset: 'utf-8'
-      }
-    ]
   },
   /*
    ** Plugins to load before mounting the App
@@ -76,7 +57,7 @@ export default {
     '@nuxtjs/google-analytics'
   ],
   googleAnalytics: {
-    id: 'UA-173503277-2'
+    id: 'UA-182249488-2'
   },
   /*
    ** Nuxt.js modules
