@@ -7,7 +7,7 @@ v-app
     dense,
     clipped-right
   )
-    v-btn.font-weight-bold(text, to='/') @ Sea Both Sides
+    v-btn.font-weight-bold(text, to='/') @ The Nuxt Project
     v-spacer
     v-app-bar-nav-icon(@click.stop='drawer = !drawer')
   v-navigation-drawer(app, width='190', v-model='drawer', :clipped='clipped')

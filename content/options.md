@@ -1,6 +1,7 @@
 ---
 categories:
   blog:
+    -
 
 tags:
   blog:
