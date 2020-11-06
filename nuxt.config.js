@@ -38,6 +38,27 @@ export default {
     script: [{
       src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'
     }, ],
+    __dangerouslyDisableSanitizersByTagID: {
+      description: ['innerHTML']
+    },
+    script: [{
+        hid: 'gtm-script1',
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-4NVQJY5ZR8',
+        defer: true
+      },
+      {
+        hid: 'gtm-script2',
+        innerHTML: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-4NVQJY5ZR8');
+        `,
+        type: 'text/javascript',
+        charset: 'utf-8'
+      }
+    ]
   },
   /*
    ** Plugins to load before mounting the App
