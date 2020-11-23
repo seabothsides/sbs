@@ -1,4 +1,4 @@
-# seaBothSides
+# the nuxt project
 
 ## Build Setup
 
