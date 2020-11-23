@@ -3,9 +3,17 @@ backend:
   branch: master
 
 publish_mode: editorial_workflow
+site_url: https://www.seabothsides.com
+
 media_folder: static/uploads
 public_folder: /uploads
-site_url: https://www.seabothsides.com
+
+media_library:
+  name: cloudinary
+  output_filename_only: true
+  config:
+    cloud_name: seabothsides
+    api_key: 523568347738799
 
 collections:
   - label: 'Options'

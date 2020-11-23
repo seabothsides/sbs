@@ -42,16 +42,20 @@ export default {
 </script>
 
 <template lang="pug">
-v-carousel(height='100vh', show-arrows-on-hover, hide-delimiter-background, cycle )
-  v-carousel-item(v-for='(i, index) in landing.section',
-  :key='index', eager)
-    v-sheet(color="blue-grey", height='100%')
+v-carousel(
+  height='100vh',
+  show-arrows-on-hover,
+  hide-delimiter-background,
+  cycle
+)
+  v-carousel-item(v-for='(i, index) in landing.section', :key='index', eager)
+    v-sheet(color='blue-grey', height='100%')
       v-row.text-center.text-md-left(
-      justify='center',
-      align='center',
-      style='height: 100%',
-      dense
-    )
+        justify='center',
+        align='center',
+        style='height: 100%',
+        dense
+      )
         v-col.pl-md-9.pa-5(cols=12, md=6)
           p.title {{ landing.section[index].content.title }}
           p.caption.text-md-justify {{ landing.section[index].content.caption }}
