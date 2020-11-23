@@ -130,7 +130,7 @@ collections:
               label: Image,
               name: img,
               widget: image,
-              default: /uploads/author-img-ric.png,
+              default: https://res.cloudinary.com/seabothsides/image/upload/v1606141757/author-img-ric_p0qd1b.png,
             }
       - label: 'Categories'
         name: 'categories'

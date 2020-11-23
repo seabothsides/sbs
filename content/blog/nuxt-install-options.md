@@ -4,7 +4,7 @@ description: What the Nuxt Js install options mean and which ones are the best, 
 author:
   name: Ricardo Calcina
   bio: Self taught web developer, primarly using Nuxt for front end work.
-  img: /uploads/author-img-ric.png
+  img: https://res.cloudinary.com/seabothsides/image/upload/v1606141757/author-img-ric_p0qd1b.png
 ---
 
 After starting a Nuxt JS application you're presented with a plethora of options to initialise the website with
