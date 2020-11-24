@@ -19,19 +19,19 @@ Install [Node for your device](https://nodejs.org/en/download/)
 
 To install yarn, a known mac package manager is [Home Brew](https://brew.sh/) to check if you have Home Brew installed open the mac terminal and run the command:
 
-```
+```bash[terminal]
 brew -v
 ```
 
 Otherwise install Home Brew with the command:
 
-```
+```bash[terminal]
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 Then to install yarn simply run:
 
-```
+```bash[terminal]
 brew install yarn
 ```
 
@@ -39,7 +39,7 @@ Easy right!
 
 Now to make a website using Nuxt JS we simply run the command:
 
-```
+```bash[terminal]
 yarn create nuxt-app <your-awesome-project-name>
 ```
 

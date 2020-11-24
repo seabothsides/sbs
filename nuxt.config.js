@@ -81,6 +81,17 @@ export default {
     }
   },
   /*
+   ** nuxt content module prism theme settings
+   */
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-coldark-dark.css'
+      }
+    }
+  },
+
+  /*
    ** styles-resource module configuration
    ** https://github.com/nuxt-community/style-resources
    */

@@ -23,6 +23,7 @@
     "node-sass": "^4.14.1",
     "nuxt-ssr-cache": "^1.5.2",
     "prettier": "^2.0.5",
+    "prism-themes": "^1.5.0",
     "pug": "^3.0.0",
     "pug-plain-loader": "^1.0.0",
     "remark-footnotes": "2",

@@ -157,7 +157,7 @@ Bootstrap has a documentation tailored to Bootstrap-vue which uses the same tags
 
 ### Standardised
 
-Bootstrap uses the very common breakpoint jargon. `col-lg-12` for large viewports, `col-sm-4` for small ones. You get the gist. The column size, the breakpoint at which it applies, and then the value.
+Bootstrap uses the very common breakpoint jargon. **col-lg-12** for large viewports, **col-sm-4** for small ones. You get the gist. The column size, the breakpoint at which it applies, and then the value.
 
 This is common in a lot, if not all frameworks with some variations in the actual implementation. This means learning Bootstrap first can be transferrable to other frameworks. While this is true for other frameworks. Bootstrap is by the far the easiest to start with.
 
@@ -203,7 +203,7 @@ Vuesax is completely responsive and lends itself well to mobile first design
 
 The syntax is simple, adjusting the layout with three predefined widths. Although there aren't many options for the view ports, they do the job extremely well.
 
-The default width is set with `w = 12` while the other breakpoints are simply set using `sm = 6` or `xl = 4`
+The default width is set with **w = 12** while the other breakpoints are simply set using **sm = 6** or **xl = 4**
 
 ### Icons
 
@@ -291,7 +291,7 @@ Buefy offers more components on top of the original 10 in Bulma.
 
 Some of the most useful being Skeleton, which is a placeholder for content to load.
 
-The components in Buefy uses the same syntax as Bootstrap. So expressions like `<b-card>` are all work the same, just with a different framework.
+The components in Buefy uses the same syntax as Bootstrap. So expressions like **<b-card\>** are all work the same, just with a different framework.
 
 Because Buefy has the same tag style as Bootstrap, you can use the code snippets in .vue file types and code blazing fast.
 

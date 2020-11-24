@@ -50,7 +50,7 @@ v-container
     ul
       p.text-center.overline.mb-n1 Table Of Contents
       li(v-for="link of article.toc" :key="link.id" :class="{ 'text-wrap pb-1 v-list-item__title': link.depth === 2, 'pl-5 pb-1 v-list-item__subtitle': link.depth === 3 }")
-        NuxtLink(:to="`#${link.id}`") {{ link.text }}
+        a(:href="`#${link.id}`") {{ link.text }}
   v-container
     h1.text-h4.text-capitalize {{ article.title }}
     div.text-overline.ml-1.text--secondary Article last updated: {{ formatDate(article.updatedAt) }}
@@ -63,7 +63,7 @@ v-container
     ul.hidden-md-and-up.mb-2.pl-2
       p.text--secondary.mb-n1.overline Table Of Contents
       li.mb-1(v-for="link of article.toc" :key="link.id" :class="{ 'text-wrap v-list-item__title': link.depth === 2, 'pl-5 v-list-item__subtitle': link.depth === 3 }")
-        NuxtLink(:to="`#${link.id}`") {{ link.text }}
+       a(:href="`#${link.id}`") {{ link.text }}
     v-divider.mb-2
     nuxt-content(:document="article") /
 </template>
@@ -76,6 +76,7 @@ v-container
 
 .nuxt-content strong {
   color: #e040fb;
+  font-size: 0.96em;
 }
 
 .nuxt-content a {
@@ -95,14 +96,32 @@ v-container
   padding: 0.5em 10px;
 }
 
+code[class*='language-'] ::selection,
+code[class*='language-']::selection,
+pre[class*='language-'] ::selection,
+pre[class*='language-']::selection {
+  background: #7e7d7e;
+}
 .v-application code {
-  background-color: #e3edf2;
-  color: #1460b6;
-  font-size: 1em;
+  background-color: transparent;
+  color: #f5f7fa;
+  font-size: 0.95em;
 }
 
-pre[class*='language-'] {
-  background: #f6fbfb;
+.nuxt-content-highlight .filename {
+  color: #cbd5e0;
+  z-index: 10;
+  position: absolute;
+  right: 0;
+  margin-right: 0.5rem;
+  font-size: 0.865rem;
+  font-weight: 300;
+  margin-top: 0.25rem;
+}
+
+.nuxt-content pre {
+  position: static;
+  background-color: #2f495e;
 }
 
 a {
