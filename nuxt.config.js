@@ -1,20 +1,11 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
-  /*
-   ** Nuxt rendering mode
-   ** See https://nuxtjs.org/api/configuration-mode
-   */
-  mode: 'universal',
-  /*
-   ** Nuxt target
-   ** See https://nuxtjs.org/api/configuration-target
-   */
+
+  // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
-  /*
-   ** Headers of the page
-   ** See https://nuxtjs.org/api/configuration-head
-   */
+
+  // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'The Nuxt Project',
     meta: [{
@@ -39,19 +30,14 @@ export default {
       src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'
     }, ],
   },
-  /*
-   ** Plugins to load before mounting the App
-   ** https://nuxtjs.org/guide/plugins
-   */
+
+  // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
-  /*
-   ** Auto import components
-   ** See https://nuxtjs.org/api/configuration-components
-   */
+
+  // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
-  /*
-   ** Nuxt.js dev-modules
-   */
+
+  // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     '@nuxtjs/vuetify',
     '@nuxtjs/google-analytics'
@@ -59,17 +45,16 @@ export default {
   googleAnalytics: {
     id: 'UA-182249488-2'
   },
-  /*
-   ** Nuxt.js modules
-   */
+
+  // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     '@nuxtjs/style-resources',
     'nuxt-ssr-cache',
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/sitemap'
   ],
-  /*
-   ** nuxt-ssr-cache module config
-   */
+
+  // nuxt-ssr-cache module config
   cache: {
     pages: [
       '/',
@@ -80,9 +65,8 @@ export default {
       ttl: 10 * 60
     }
   },
-  /*
-   ** nuxt content module prism theme settings
-   */
+
+  // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {
     markdown: {
       prism: {
@@ -91,19 +75,37 @@ export default {
     }
   },
 
-  /*
-   ** styles-resource module configuration
-   ** https://github.com/nuxt-community/style-resources
-   */
+  // Sitemap settings https://jackwhiting.co.uk/posts/generating-sitemap-entries-for-nuxt-content/
+  sitemap: {
+    hostname: process.env.BASE_URL || 'https://www.thenuxtproject.com/',
+    routes: async () => {
+      if (process.env.NODE_ENV !== 'production') return
+      const {
+        $content
+      } = require('@nuxt/content')
+
+      const articles = await $content('blog')
+        .only(['path'])
+        .fetch()
+      const pages = await $content('pages')
+        .only(['path'])
+        .fetch()
+
+      // Map and concatenate the routes and return the array.
+      return []
+        .concat(...pages.map((w) => w.path))
+        .concat(...articles.map((p) => p.path))
+    }
+  },
+
+  // styles-resource module (https://github.com/nuxt-community/style-resources)
   styleResources: {
     sass: [
       '~assets/variables.sass'
     ]
   },
-  /*
-   ** vuetify module configuration
-   ** https://github.com/nuxt-community/vuetify-module
-   */
+
+  // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
     customVariables: ['~/assets/variables.sass'],
     treeShake: true,
@@ -125,9 +127,7 @@ export default {
       }
     }
   },
-  /*
-   ** Build configuration
-   ** See https://nuxtjs.org/api/configuration-build/
-   */
+
+  // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {}
 }
