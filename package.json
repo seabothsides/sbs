@@ -29,8 +29,8 @@
     "pug-plain-loader": "^1.0.0",
     "remark-footnotes": "2",
     "sass-loader": "7.1.0",
-    "vue": "2.6.11",
-    "vue-template-compiler": "2.6.11",
+    "vue": "2.6.12",
+    "vue-template-compiler": "2.6.12",
     "webpack": "4.44.1"
   }
 }
