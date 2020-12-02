@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+import getRoutes from './utils/getRoutes'
 
 export default {
 
@@ -75,26 +76,17 @@ export default {
     }
   },
 
+  // Config env variables
+  publicRuntimeConfig: {
+    baseURL: 'http://localhost:3000/' || 'https://www.thenuxtproject.com/'
+  },
+
   // Sitemap settings https://jackwhiting.co.uk/posts/generating-sitemap-entries-for-nuxt-content/
   sitemap: {
-    hostname: process.env.BASE_URL || 'https://www.thenuxtproject.com/',
-    routes: async () => {
+    hostname: this.baseURL,
+    routes() {
       if (process.env.NODE_ENV !== 'production') return
-      const {
-        $content
-      } = require('@nuxt/content')
-
-      const articles = await $content('blog')
-        .only(['path'])
-        .fetch()
-      const pages = await $content('pages')
-        .only(['path'])
-        .fetch()
-
-      // Map and concatenate the routes and return the array.
-      return []
-        .concat(...pages.map((w) => w.path))
-        .concat(...articles.map((p) => p.path))
+      return getRoutes();
     }
   },
 
