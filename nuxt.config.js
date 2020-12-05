@@ -83,7 +83,7 @@ export default {
 
   // Sitemap settings https://jackwhiting.co.uk/posts/generating-sitemap-entries-for-nuxt-content/
   sitemap: {
-    hostname: this.baseURL,
+    hostname: 'https://www.thenuxtproject.com/',
     routes() {
       if (process.env.NODE_ENV !== 'production') return
       return getRoutes();
